@@ -21,9 +21,9 @@ def canCirculate(date: str, time: str, licensePlate: str):
 
     dayTime = datetime.strftime("%H:%M")
 
-    if ((dayTime >= timePeriodsLimits[0][0] and dayTime <= timePeriodsLimits[1][0]) or
-        (dayTime >= timePeriodsLimits[0][1] and dayTime <= timePeriodsLimits[1][1])):
-        return False
+    for i in range(len(timePeriodsLimits)):
+        if ((dayTime >= timePeriodsLimits[0][i]) and (dayTime <= timePeriodsLimits[1][i])):
+            return False
     return True
 
 if __name__ == '__main__':
