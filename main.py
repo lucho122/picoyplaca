@@ -31,5 +31,5 @@ if __name__ == '__main__':
     paramsTime = input("Ingrese la hora deseada (HH:mm): ")
     paramsLicensePlate = input("Ingrese la placa del vehiculo (XXX-0000): ")
 
-    canCirculate = "Usted puede circular" if canCirculate(paramsDate, paramsTime, paramsLicensePlate) else "Usted NO puede circular"
-    print("Resultado: ", canCirculate)
+    circulateResult = "Usted puede circular" if canCirculate(paramsDate, paramsTime, paramsLicensePlate) else "Usted NO puede circular"
+    print("Resultado: ", circulateResult)
